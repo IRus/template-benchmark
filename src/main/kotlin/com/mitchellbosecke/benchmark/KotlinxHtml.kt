@@ -35,7 +35,7 @@ open class KotlinxHtml : BaseBenchmark() {
 
     @Suppress("NOTHING_TO_INLINE")
     inline fun render(items: List<Stock>): String {
-        return StringBuilder(100 * 1024)
+        return StringBuilder(10 * 1024)
             .appendHTML(false)
             .html {
                 head {

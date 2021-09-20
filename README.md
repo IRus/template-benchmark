@@ -1,6 +1,21 @@
 template-benchmark
 ================
 
+```
+Benchmark                        Mode  Cnt       Score   Error  Units
+Baseline.benchmark              thrpt       269920.492          ops/s
+Freemarker.benchmark            thrpt        35144.785          ops/s
+Jte.benchmark                   thrpt       207783.558          ops/s
+KotlinxHtml.benchmark           thrpt        47515.473          ops/s
+KotlinxHtmlRealistic.benchmark  thrpt        54598.292          ops/s
+Mustache.benchmark              thrpt        45663.615          ops/s
+Pebble.benchmark                thrpt        63874.127          ops/s
+Rocker.benchmark                thrpt       127891.133          ops/s
+Thymeleaf.benchmark             thrpt        12072.653          ops/s
+Trimou.benchmark                thrpt        55144.275          ops/s
+Velocity.benchmark              thrpt        40399.933          ops/s
+```
+
 JMH benchmark for popular Java template engines:
 
 * [Freemarker](http://freemarker.org/)

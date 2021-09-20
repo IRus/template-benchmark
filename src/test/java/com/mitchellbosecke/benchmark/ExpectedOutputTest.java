@@ -1,18 +1,16 @@
 package com.mitchellbosecke.benchmark;
 
-import static org.junit.Assert.assertEquals;
+import com.mitchellbosecke.pebble.error.PebbleException;
+import freemarker.template.TemplateException;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Locale;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-import com.mitchellbosecke.pebble.error.PebbleException;
-
-import freemarker.template.TemplateException;
+import static org.junit.Assert.assertEquals;
 
 /**
  *
@@ -51,6 +49,20 @@ public class ExpectedOutputTest {
         Velocity velocity = new Velocity();
         velocity.setup();
         assertOutput(velocity.benchmark());
+    }
+
+    @Test
+    public void testBaselineOutput() throws IOException {
+        Baseline baseline = new Baseline();
+        baseline.setup();
+        assertOutput(baseline.benchmark());
+    }
+
+    @Test
+    public void testKotlinxHtmlOutput() throws IOException {
+        KotlinxHtml kotlinxHtml = new KotlinxHtml();
+        kotlinxHtml.setup();
+        assertOutput(kotlinxHtml.benchmark());
     }
 
     @Test

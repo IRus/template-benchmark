@@ -58,6 +58,13 @@ public class ExpectedOutputTest {
         assertOutput(baseline.benchmark());
     }
 
+    @Test
+    public void testJteOutput() throws IOException {
+        Jte jte = new Jte();
+        jte.setup();
+        assertOutput(jte.benchmark());
+    }
+
     // TODO: Fix order of elements in head and CDATA
     // @Test
     public void testKotlinxHtmlOutput() throws IOException {

@@ -7,7 +7,6 @@ import kotlinx.html.html
 import kotlinx.html.link
 import kotlinx.html.meta
 import kotlinx.html.script
-import kotlinx.html.stream.createHTML
 import kotlinx.html.title
 import org.openjdk.jmh.annotations.Benchmark
 import org.openjdk.jmh.annotations.Setup
